@@ -7,6 +7,8 @@ interface ArticleFooterProps {
   previous: ArticleMetadata | null;
   next: ArticleMetadata | null;
   related: ArticleMetadata[];
+  seriesPosition: number | null;
+  seriesSize: number;
 }
 
 export function ArticleFooter({
@@ -14,6 +16,8 @@ export function ArticleFooter({
   previous,
   next,
   related,
+  seriesPosition,
+  seriesSize,
 }: ArticleFooterProps) {
   return (
     <footer className="article-footer">
@@ -25,9 +29,9 @@ export function ArticleFooter({
 
           <strong>{current.series}</strong>
 
-          {current.seriesOrder && (
+          {seriesPosition && seriesSize > 0 && (
             <span>
-              Article {current.seriesOrder} in this series
+              Part {seriesPosition} of {seriesSize}
             </span>
           )}
         </section>

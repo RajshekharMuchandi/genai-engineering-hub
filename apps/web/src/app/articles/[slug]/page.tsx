@@ -138,6 +138,11 @@ export default async function ArticlePage({
       candidate.metadata.slug === metadata.slug,
   );
 
+  const seriesPosition =
+    seriesIndex >= 0 ? seriesIndex + 1 : null;
+
+  const seriesSize = seriesArticles.length;
+
   const previous =
     seriesIndex > 0
       ? seriesArticles[seriesIndex - 1].metadata
@@ -278,6 +283,8 @@ export default async function ArticlePage({
               previous={previous}
               next={next}
               related={related}
+              seriesPosition={seriesPosition}
+              seriesSize={seriesSize}
             />
           </div>
 
