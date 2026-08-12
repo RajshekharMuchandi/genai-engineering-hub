@@ -1,0 +1,54 @@
+# macOS
+.DS_Store
+
+# IDEs
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Node
+node_modules/
+.next/
+out/
+dist/
+coverage/
+.turbo/
+.pnpm-store/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Logs
+*.log
+logs/
+
+# Temporary
+.tmp/
+temp/
+tmp/
+
+# Build artifacts
+build/
+artifacts/
+
+# Local datasets / model artifacts
+*.bin
+*.safetensors
+*.gguf
+
+# Credentials
+credentials.json
+service-account*.json
+secrets/
